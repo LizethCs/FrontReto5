@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script type="text/javascript" src="js/reportes.js"></script>  
+        <script src="https://cdn.tailwindcss.com"></script> 
+        <script type="text/javascript">
+            window.onload = traerReporteStatus();
+        </script>
+                <script type="text/javascript">
+                    window.onload = traerReportesClientes();
+                </script>
+        <title>Reportes</title>
+    </head>
+    <body>
+        <nav class="bg-blue-700 ">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+              <div class="flex h-16 items-center justify-between">
+                <div class="flex items-center">
+                  <div class="flex-shrink-0">
+                    <!-- <img class="h-8 w-8" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Renta de maquina"> -->
+                  </div>
+                  <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                      <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                      <a href="index.html" class="bg-blue-700 hover:bg-blue-800 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Inicio</a>
+        
+                      <a href="machine.html" class="bg-blue-700 hover:bg-blue-800 text-white px-3 py-2 rounded-md text-sm font-medium">Máquinas</a>
+        
+                      <a href="cliente.html" class="bg-blue-700 hover:bg-blue-800 text-white px-3 py-2 rounded-md text-sm font-medium">Clientes</a>
+        
+                      <a href="mensajes.html" class="bg-blue-700 hover:bg-blue-800 text-white px-3 py-2 rounded-md text-sm font-medium">Mensajes</a>
+        
+                      <a href="reservaciones.html" class="bg-blue-700 hover:bg-blue-800 text-white px-3 py-2 rounded-md text-sm font-medium">Reservaciones</a>
+                    
+                      <a href="categoria.html" class="bg-blue-700 hover:bg-blue-800 text-white px-3 py-2 rounded-md text-sm font-medium">Categorías</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+          </nav>
+          <div class="container px-5 py-10 mx-auto">
+            <div class="flex flex-col text-center w-full mb-12">
+             <strong><h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-blue-700">Estado de las reservas</h1></strong>
+            </div>
+            <div id="resultado1"></div>
+
+            <div class="container px-5 py-10 mx-auto">
+                <div class="flex flex-col text-center w-full mb-7">
+                 <strong><h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-blue-700">Reservas en un intervalo de tiempo</h1></strong>
+                 
+            <div class="flex items-center justify-center">
+                <div class="datepicker relative form-floating mb-3 xl:w-96">
+                    <label for="floatingInput" class="text-base font-medium text-black">Ingrese la fecha de inicio de la reservación:</label>
+                  <input type="date"  
+                    class="form-control block w-full px-3 py-1.5 text-base font-normal text-blue-900 bg-white bg-clip-padding border border-solid border-blue-500 rounded transition ease-in-out m-0 focus:text-blue-900 focus:bg-white focus:border-blue-600 focus:outline-none"
+                    id="RstartDate"/>
+                </div>
+              </div>
+              <div class="flex items-center justify-center">
+                <div class="datepicker relative form-floating mb-3 xl:w-96">
+                    <label for="floatingInput" class="text-base font-medium text-black">Ingrese la fecha de devolución de la máquina:</label>
+                  <input type="date"  
+                    class="form-control block w-full px-3 py-1.5 text-base font-normal text-blue-900 bg-white bg-clip-padding border border-solid border-blue-500 rounded transition ease-in-out m-0 focus:text-blue-900 focus:bg-white focus:border-blue-600 focus:outline-none"
+                    id="RdevolutionDate"/>
+    <br><button class="form-control block w-full text-white bg-blue-700 border-0 py-2 px-8 focus:outline-none hover:bg-blue-800 rounded text-lg" onclick="traerReportesFechas()">Ver reporte</button>
+                </div>
+                </div>
+                <div id="resultado2"></div>
+                </div>
+            
+            
+                <div class="container px- py-10 mx-auto">
+                    <div class="flex flex-col text-center w-full mb-12">
+                      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-blue-700">Top clientes con más reservas</h1>
+                      </div>
+                      <div id="resultado3"></div>
+                    </div>
+    </body>
+
+    <!-- <button onclick="traerReporteStatus()">
+        Crear Reporte Status Reservaciones
+    </button> -->
+
+
+<!-- 
+    <div id="resultado2"></div> -->
+
+    <div class="container px-2 py-2 mx-auto">
+    <!-- <div id="resultado3"></div> -->
+</div>
+</html>
+
+

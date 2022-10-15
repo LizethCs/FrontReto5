@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script type="text/javascript" src="js/funcionesMachine.js"></script>  
+        <title>Máquinas</title>
+    </head>
+    <body>
+        <nav class="bg-blue-700 ">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+              <div class="flex h-16 items-center justify-between">
+                <div class="flex items-center">
+                  <div class="flex-shrink-0">
+                    <!-- <img class="h-8 w-8" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company"> -->
+                  </div>
+                  <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                      <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                      <a href="index.html" class="bg-blue-700 hover:bg-blue-800 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Inicio</a>
+                      <a href="categoria.html" class="bg-blue-700 hover:bg-blue-800 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Categorias</a>
+        
+                      <a href="cliente.html" class="bg-blue-700 hover:bg-blue-800 text-white px-3 py-2 rounded-md text-sm font-medium">Clientes</a>
+        
+                      <a href="mensajes.html" class="bg-blue-700 hover:bg-blue-800 text-white px-3 py-2 rounded-md text-sm font-medium">Mensajes</a>
+        
+                      <a href="reservaciones.html" class="bg-blue-700 hover:bg-blue-800 text-white px-3 py-2 rounded-md text-sm font-medium">Reservaciones</a>
+                    
+                      <a href="reportes.html" class="bg-blue-700 hover:bg-blue-800 text-white px-3 py-2 rounded-md text-sm font-medium">Reportes</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+          </nav>
+
+          <section class="text-black body-font">
+            <div class="container px-5 py-24 mx-auto">
+              <div class="flex flex-col text-center w-full mb-12">
+                <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-blue-700">Crear Máquina</h1>
+              </div>
+              <div class="flex lg:w-2/3 w-full sm:flex-row flex-col mx-auto px-8 sm:space-x-4 sm:space-y-0 space-y-4 sm:px-0 items-end">
+                <div class="relative flex-grow w-full">
+                  <label for="nombre" class="leading-7 text-sm text-black">Nombre</label>
+                  <input type="text" id="name" name="name" class="w-full bg-gray-100 bg-opacity-50 rounded border border-solid border-blue-500 focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                </div>
+                <div class="relative flex-grow w-full">
+                  <label for="brand" class="leading-7 text-sm text-black">Marca</label>
+                  <input type="text" id="brand" name="brand" class="w-full bg-gray-100 bg-opacity-50 rounded border border-solid border-blue-500 focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                </div>
+                <div class="relative flex-grow w-full">
+                    <label for="year" class="leading-7 text-sm text-black">Año</label>
+                    <input type="number" id="year" name="year" class="w-full bg-gray-100 bg-opacity-50 rounded border border-solid border-blue-500 focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                  </div>
+                  <div class="relative flex-grow w-full">
+                    <label for="description" class="leading-7 text-sm text-black">Descripción</label>
+                    <input type="text" id="description" name="description" class="w-full bg-gray-100 bg-opacity-50 rounded border border-solid border-blue-500 focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+
+                </div>
+                <div>   
+                    <label for="categoria" class="leading-7 text-sm text-black">Categoría</label>
+                    <select class="rounded border appearance-none border-solid border-blue-500 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200 focus:border-indigo-500 text-base pl-3 pr-10" id="select-categoria"></select>
+                </div>
+                <button class="text-white bg-blue-700 border-0 py-2 px-8 focus:outline-none hover:bg-blue-800 rounded text-lg" onclick="postMachine()">Crear</button>
+          </section>
+        <script type="text/javascript">
+            window.onload = getMachine();
+        </script>
+
+        <script type="text/javascript">
+            window.onload = getCategoria_Machine();
+        </script>
+
+        <div id="resultadoMachine"></div>
+
+        <!-- <input type="text" id="name" placeholder="nombre" >
+        <input type="text" id="brand" placeholder="marca" >
+        <input type="number" id="year" placeholder="año" >
+        <input type="text" id="description" placeholder="descripción" > -->
+        
+    
+<!-- 
+        <button onclick="postMachine()">
+            Crear Maquina
+        </button> -->
+    </body>
+
+</html>
