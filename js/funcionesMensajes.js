@@ -1,5 +1,3 @@
-//GET, POST , PUT Y DELETE
-
 function getMensajes (){
     $.ajax({
         url:"http://144.24.42.113:8080/api/Message/all",
@@ -90,8 +88,6 @@ function deleteMensajes(idDesdeBoton){
   });
 }
 
-
-////////////////////////////////////////////
 
 function pintarMensajes(respuesta){
     let myTable='<div class="container px-5 py-24 mx-auto"><table class="table-auto w-full text-center whitespace-no-wrap">';

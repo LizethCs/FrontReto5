@@ -1,5 +1,3 @@
-//GET, POST , PUT Y DELETE
-
 function getMachine() {
   $.ajax({
     url: "http://144.24.42.113:8080/api/Machine/all",
@@ -82,7 +80,7 @@ function deleteMachine(idDesdeBoton) {
   });
 }
 
-////////////////////////////////////////////////////////
+
 
 function pintarMachine(json_maquinas) {
   let myTable='<div class="container px-5 py-24 mx-auto"><table class="table-auto w-full text-center whitespace-no-wrap">';

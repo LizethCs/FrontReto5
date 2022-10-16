@@ -81,7 +81,7 @@ function deleteCategoria(idDesdeBoton){
 
 }
 
-////////////////////////////////////////////
+
 
 function pintarCategoria(respuesta){
     let myTable='<br><div class="container px-5 py-24 mx-auto"><table class="table-auto w-full text-center whitespace-no-wrap">';

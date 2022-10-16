@@ -1,4 +1,3 @@
-//GET, POST , PUT Y DELETE
 
 function getCliente (){
     $.ajax({

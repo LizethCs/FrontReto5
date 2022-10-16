@@ -86,7 +86,7 @@ function deleteReservaciones(data){
     });
 
 }
-//////////////////////////////////////////////
+
 function  pintarReservaciones(json_maquinas){
     let myTable='<br><br><table class="table-auto w-full text-center whitespace-no-wrap">';
     myTable+="<td class='flex items-center justify-center'><strong>Id Reservación<strong></td>";
@@ -113,7 +113,7 @@ function  pintarReservaciones(json_maquinas){
     $("#resultado1").html(myTable);
 }
 
-///////////////////////////////////////////////
+
 
 function getClient_Reservation(){
     $.ajax({
